@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/app2.css">
+</head>
+
+<body>
+    <div class="center">
+        <h1>GAMERS</h1>
+        <h2>あなたの年齢は？</h2>
+    </div>
+
+    <div class="center">
+        <select>
+		<option>未解答</option>
+		<option>10代以下</option>
+            <option>10代</option>
+            <option>20代</option>
+            <option>30代</option>
+            <option>40代</option>
+            <option>50代</option>
+            <option>60代</option>
+            <option>70代</option>
+            <option>80代</option>
+            <option>90代</option>
+            <option>100代</option>
+        </select>
+    </div>
+
+    <div class="center">
+        <h3>好きなゲームはある？</h3>
+        <label>
+            <input type="radio" name="choice" value="yes"> Yes
+        </label>
+        <label>
+            <input type="radio" name="choice" value="no"> No
+        </label>
+    </div>
+
+    <div class="center">
+        <h4>＜yesの人＞どんなゲームが好きなの？<br>＜noの人＞食べたことない方は食べてみたいものはありますか？</h4>
+        <form>
+            <textarea oninvalid="onInvalid(event)" oninput="onInput(event)" required id="comment" name="comment"
+                rows="4" cols="50"></textarea>
+            <br>
+            <button type="submit">送信</button>
+        </form>
+    </div>
+
+    <script>
+        function onInput(event) {
+            event.currentTarget.classList.remove("red");
+        }
+
+        function onInvalid(event) {
+            event.currentTarget.classList.add("red");
+        }
+    </script>
+</body>
+
+</html>
